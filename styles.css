@@ -16,24 +16,24 @@
 
 .left{
     width: 20%;
-    height:700px;
+    height:750px;
     background-color: rgb(63,81,181);
     float:left;
 }
 
 .center{
     width: 60%;
-    height:700px;
+    height:750px;
     background-color: rgb(76,176,80);
     float:left;
 }
 
 .right{
     width: 20%;
-    height:700px;
+    height:750px;
     background-color: rgb(254,153,0);
     float:left;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .footer{
@@ -71,6 +71,84 @@ li a.verticalnav:hover{
     background-color: white;
 }
 
+@media screen and (max-width:1600px)
+{
+    iframe{
+        height:160px;
+        width:160px;
+    }
+    li a.verticalnav{
+    display:block;
+    color:rgb(7, 14, 8);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 24px;
+}
+p{
+    font-size: 20px;
+}
+img{
+    height:50px;
+    width: 30px;
+}
+.ul_media{
+    display:none;
+}
+}
+
+@media screen and (max-width:1400px)
+{
+    iframe{
+        height:140px;
+        width:140px;
+    }
+    li a.verticalnav{
+    display:block;
+    color:rgb(226, 224, 237);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 22px;
+}
+p{
+    font-size: 18px;
+}
+img{
+    height:50px;
+    width: 30px;
+}
+.ul_media{
+    display:none;
+}
+}
+
+@media screen and (max-width:1200px)
+{
+    iframe{
+        height:90px;
+        width:90px;
+    }
+    li a.verticalnav{
+    display:block;
+    color:rgb(0, 139, 30);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+p{
+    font-size: 16px;
+}
+img{
+    height:50px;
+    width: 30px;
+}
+.ul_media{
+    display:none;
+}
+}
+
 @media screen and (max-width:1000px)
 {
     iframe{
@@ -79,17 +157,18 @@ li a.verticalnav:hover{
     }
     li a.verticalnav{
     display:block;
-    color:rgb(139, 0, 139);
+    color:rgb(184, 19, 96);
     text-align: left;
     padding: 5px 5px;
     text-decoration: none;
     font-size: 18px;
 }
 p{
-    font-size: 12px;
+    font-size: 14px;
 }
 img{
-    display: none;
+    height:50px;
+    width: 30px;
 }
 .ul_media{
     display:none;
@@ -99,25 +178,23 @@ img{
 @media screen and (max-width:800px)
 {
     iframe{
-        height:100px;
-        width:100px;
+        height:60px;
+        width:60px;
     }
     li a.verticalnav{
     display:block;
-    color:rgb(0, 139, 7);
+    color:rgb(211, 212, 217);
     text-align: left;
     padding: 5px 5px;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 16px;
 }
 p{
-    font-size: 10px;
-}
-.media{
-    display:none;
+    font-size: 12px;
 }
 img{
-    display: none;
+    height:50px;
+    width: 30px;
 }
 .ul_media{
     display:none;
@@ -132,22 +209,87 @@ img{
     }
     li a.verticalnav{
     display:block;
-    color:rgb(139, 0, 0);
+    color:rgb(199, 124, 38);
     text-align: left;
     padding: 5px 5px;
     text-decoration: none;
-    font-size: 8px;
+    font-size: 14px;
 }
 p{
-    font-size: 8px;
-}
-.media{
-    display:none;
+    font-size: 10px;
 }
 img{
-    display: none;
+    height:40px;
+    width: 40px;
 }
 .ul_media{
     display:none;
 }
+}
+
+@media screen and (max-width:400px)
+{
+    iframe{
+        height:40px;
+        width:40px;
+    }
+    li a.verticalnav{
+    display:block;
+    color:rgb(196, 75, 15);
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 12px;
+}
+p{
+    font-size: 6px;
+}
+img{
+    height:20px;
+    width: 20px;
+}
+.ul_media{
+    display:none;
+}
+}
+
+
+.slider{
+    width:100%;
+    height: 300px;
+    align-content: center;
+    background:url(PIC1.webp);
+    animation: slide 20s infinite;
+}
+
+@keyframes slide{
+    25%{
+        background: url(stadium.jpg);
+    }
+    50%{
+        background: url(virat.jpg);
+    }
+    75%{
+        background: url(stadium.jpg);
+    }
+    100%{
+        background: url(PIC1.webp);
+    }
+}
+
+p::first-letter{
+    color:red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.transition{
+    width:100px;
+    height:100px;
+    transition: width 2s,height 2s, transform 1s;
+}
+.transition:hover{
+    width:300px;
+    height:200px;
+    transform:rotate(360deg);
 }
