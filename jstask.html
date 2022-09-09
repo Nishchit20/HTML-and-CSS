@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+
+
+    <!--Wap to assign a value in a variable and find it is even or odd? -->
+    <script>
+        var num=12;
+        if(num%2==0){
+            document.write(num+" "+"is Even");
+            document.write("<br>");
+        }
+        else{
+            document.write(num+" "+"is Odd");
+            document.write("<br>");
+        }
+    </script>
+    <hr>
+
+
+    <!--Wap to assign 2 values in 2 variables and swap them? -->
+    <!--with the help of 3rd variable-->
+    <script>
+        var a=10;
+        var b=20;
+        document.write("Before Swapping:"+"<br>")
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+        var temp=b;
+        b=a;
+        a=temp;
+        document.write("After Swapping:"+"<br>")
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+    </script>
+    <hr>
+
+    <!--without use of 3rd variable-->
+    <script>
+        var a=10;
+        var b=20;
+        document.write("Before Swapping:"+"<br>")
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        document.write("After Swapping:"+"<br>")
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+    </script>
+    <hr>
+
+
+    <!--Wap to input 5 subject marks in 5 variables and find the total , percentage and grade ?-->
+    <script>
+        var m1=90;
+        var m2=87;
+        var m3=85;
+        var m4=94;
+        var m5=92;
+        var total=(m1+m2+m3+m4+m5);
+        document.write("Total marks="+total+"<br>");
+        var per=(total/5);
+        document.write("Percentage="+per+"<br>");
+        if(per>80){
+            document.write("Grade : A");
+            document.write("<br>");
+        }
+        else if(per>60 && per<=80){
+            document.write("Grade : B");
+            document.write("<br>");
+        }
+        else if(per>40 && per<=60){
+            document.write("Grade : C");
+            document.write("<br>");
+        }
+        else{
+            document.write("FAIL");
+            document.write("<br>");
+        }
+    </script>
+    <hr>
+
+
+    <!--Wap to assign a value in a variable, reverse it and also find the sum of the digits of a number ? 
+-->
+    <script>
+        var val=1234;
+        var rev=0;
+        var rem=0;
+        var s=0;
+        var temp=val;
+        while(val!=0){
+            rem=(val%10);
+            val=parseInt(val/10);
+            s=(s+rem);
+            rev=(rev*10)+rem;
+        }
+        document.write("num = "+temp+"<br>");
+        document.write("rev = "+rev +"<br>");
+        document.write("sum = "+ s +"<br>");
+    </script>
+    <hr>
+
+    
+    <!--Wap to create a function for factorial?-->
+    <script>
+        var number = 7;
+        document.write("The factorial of "+ number + " is " + factorial(number));
+        function factorial(number){
+            if (number < 0) {
+                return -1;
+            }
+            else if (number === 0) {
+                return 1;
+            }
+            else {
+                let fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact =fact * i;
+                }
+                return fact;
+            }
+            
+        }
+    </script>
+    <hr>
+
+</body>
+</html>
