@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary description</title>
+</head>
+<body>
+    <div>
+    <div>
+        <fieldset style="border-radius: 10px;">
+			<legend>Job details</legend>
+            <div class="form">
+                <form>
+                    
+            
+                    <label>Job-type</label><br>
+                    <input type="radio" id="it" name="job" value="IT">
+                    <label for="it"> IT</label> <br>
+                    <input type="radio" id="testing" name="dept" value="Testing">
+                    <label for="testing"> Testing </label> <br>
+                    <input type="radio" id="Admin" name="dept" value="Admin">
+                    <label for="Admin"> Admin</label> <br>
+                    <input type="radio" id="Other" name="dept" value="Other">
+                    <label for="Other"> Other </label> <br><br>  
+
+                    <label>Salary</label><br>
+                    <input type="number" name="salary" placeholder="Salary" required><br><br>
+
+                    <input type="button" value="Check Bonus" onclick="processBonus(this.form)">
+                </form>
+                <br>
+                <div class="formMsg">
+                    <span>Salary with bonus:</span>
+                    <b id="bonus"></b>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script>
+            
+        function processBonus(form) 
+        { 
+            var salary = parseInt(form.salary.value);
+            var job = form.job.value;
+            var bonus;
+            
+            if(job=="IT"){
+                bonus=salary+((salary*50)/100);
+            }
+            else if (job=="Testing") {
+                bonus=salary+((salary*45)/100);
+            }
+            else if (job=="Admin") {
+                
+                bonus=salary+((salary*30)/100);
+            } 
+            else{
+                bonus=salary+((salary*20)/100);
+            }
+            alert(document.getElementById("bonus").innerHTML = bonus);
+        }
+    </script>
+    </div>
+    
+</body>
+</html>

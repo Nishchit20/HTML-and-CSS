@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;">Employee details</h2>
+    <fieldset style="border-radius: 10px;">
+    <div >
+        <form>
+            <label>Username</label><br>
+            <input type="text" name="username" placeholder="john" required><br><br><br>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="Password" required><br><br><br>
+            
+            <input type="button" value="Submit" onclick="processData(this.form)">
+        </form>
+        <div >
+            <p id="status"> </p>
+        </div>
+    </div>
+    </fieldset>
+
+    <script>
+        class Login {
+            display() {
+                return "Please Enter the Credentials! ";
+            }
+        }
+        
+        class Success extends Login {
+            
+            display() {
+                return "Login Successful";
+            }
+        }
+      
+        class Fail extends Login {
+           
+            display() {
+                return " Login Failed ";
+            }
+        }
+
+        function processData(form) 
+        { 
+            const ExistingUser="Nishchit" ; 
+            const ExistingPassword="appu@20" ; 
+            var username = form.username.value;
+            var password = form.password.value;
+            var v;
+            
+            if(username=="" || password==""){
+                v = new Login();
+            }
+            else if (ExistingUser==username && ExistingPassword==password) {
+                v = new Success();
+            }
+            else if (ExistingUser!=username || ExistingPassword!=password) {
+                
+                v = new Fail();
+            } 
+            msg = v.display();
+            document.getElementById("status").innerHTML = msg;
+        }
+    </script>
+    </div>
+
+</body>
+</html>
